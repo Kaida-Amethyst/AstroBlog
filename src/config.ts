@@ -7,16 +7,16 @@ import type {
 import { LinkPreset } from './types/config'
 
 export const siteConfig: SiteConfig = {
-  title: 'Fuwari',
-  subtitle: 'Demo Site',
+  title: 'Amethyst Studio',
+  subtitle: 'Digital Garden of Kaida Amethyst',
   lang: 'en',         // 'en', 'zh_CN', 'zh_TW', 'ja'
   themeColor: {
     hue: 250,         // Default hue for the theme color, from 0 to 360. e.g. red: 0, teal: 200, cyan: 250, pink: 345
     fixed: false,     // Hide the theme color picker for visitors
   },
   banner: {
-    enable: false,
-    src: 'assets/images/demo-banner.png',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+    enable: true,
+    src: 'assets/images/banner.jpeg',   // Relative to the /src directory. Relative to the /public directory if it starts with '/'
   },
   favicon: [    // Leave this array empty to use the default favicon
     // {
@@ -41,9 +41,9 @@ export const navBarConfig: NavBarConfig = {
 }
 
 export const profileConfig: ProfileConfig = {
-  avatar: 'assets/images/demo-avatar.png',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
-  name: 'Lorem Ipsum',
-  bio: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
+  avatar: 'assets/images/avatar-2.jpg',  // Relative to the /src directory. Relative to the /public directory if it starts with '/'
+  name: 'Kaida Amethyst',
+  bio: '美国北卡罗莱纳州立大学计算机硕士，编程语言方向；高级编译器工程师。',
   links: [
     {
       name: 'Twitter',
