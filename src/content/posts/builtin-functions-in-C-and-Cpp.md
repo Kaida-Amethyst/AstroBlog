@@ -2,8 +2,8 @@
 title: 几个常用的C/C++builtin函数
 description: 介绍几个工作中好用且常用的几个C和C++的builtin函数
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/1.jpg
-category: Programming
-published: 2023-04-02
+category: 编程实践
+published: 2023-05-13
 tags: [C, C++]
 ---
 

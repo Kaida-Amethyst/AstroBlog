@@ -2,9 +2,9 @@
 title: C++标准库源码剖析 - valarray
 description: C++标准库中的valarray是一个支持运算符操作的数组，这里来剖析一下它的源码
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/2.jpg
-category: Programming
-published: 2023-04-02
-tags: [C++]
+category: 编程实践
+published: 2023-07-12
+tags: [C++, Source Code Analysis]
 ---
 
 -----

@@ -2,8 +2,8 @@
 title: 为什么C语言需要结构体对齐
 description: 提供一个例子，解释为什么C语言需要结构体对齐
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Python/1.jpg
-category: Principle
-published: 2023-04-02
+category: 技术原理
+published: 2022-07-16
 tags: [C]
 ---
 

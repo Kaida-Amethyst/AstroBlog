@@ -2,8 +2,8 @@
 title: 在C++中编写Cached函数
 description: python里面有一个超好用的cache关键字，可以用来提升性能，C++虽然没有这样的东西，但是我们可以来自己实现
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Math/4.jpg
-category: Programming
-published: 2023-04-02
+category: 编程实践
+published: 2023-02-18
 tags: [C++]
 ---
 ------

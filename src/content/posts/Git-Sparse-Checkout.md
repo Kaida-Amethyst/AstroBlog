@@ -2,8 +2,8 @@
 title: Git稀疏检出
 description: 如果我们工作的git仓库过大，克隆整个仓库也许没有什么必要，我们可以只克隆一部分。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Linux/3.jpg
-category: Tools
-published: 2023-04-02
+category: 开发工具
+published: 2024-03-23
 tags: [Git]
 ---
 ------

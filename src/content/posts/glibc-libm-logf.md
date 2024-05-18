@@ -2,9 +2,9 @@
 title: glibc源码剖析 - logf
 description: 剖析一下glibc中logf的实现，这个代码的解读需要不少数学知识
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Math/2.jpg
-category: Principle
-published: 2023-04-02
-tags: [C, glibc]
+category: 技术原理
+published: 2022-07-25
+tags: [C, Source Code Analysis, Math]
 ---
 ----
 

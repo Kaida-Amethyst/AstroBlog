@@ -2,9 +2,9 @@
 title: C++11上的简单format函数
 description: C++20引入了std::format，但是如果我们不得不在低版本的C++上工作，而且又无法使用外部库的话，那不如自己来写一个吧。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/4.jpg
-category: Programming
-published: 2023-04-02
-tags: [C++ Practice]
+category: 编程实践
+published: 2023-06-12
+tags: [C++]
 ---
 
 `std::format`是c++20下的功能，但是我们可能希望在C++11下就可以使用这项功能。如果不使用外部库的话，我们可以自己来写一个。

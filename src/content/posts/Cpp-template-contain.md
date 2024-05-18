@@ -2,9 +2,9 @@
 title: 现代C++模板 - contain all none any
 description: 用模板实现不定参数的contain all none和any
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/6.jpg
-category: Programming
-published: 2023-04-02
-tags: [C++]
+category: 编程实践
+published: 2022-02-27
+tags: [C++, Meta Programming]
 ---
 
 -----

@@ -2,8 +2,8 @@
 title: 分享一些学英语的经验
 description: 来源于我的知乎回答：大量阅读英文是否是学英语的好方法
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/AI/4.png
-category: PersonalGrowth
-published: 2023-04-02
+category: 个人成长
+published: 2023-06-17
 tags: [EnglishLearning]
 ---
 

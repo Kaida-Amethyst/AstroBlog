@@ -2,8 +2,8 @@
     title: 博客开篇 - 说点闲话
     description: 正式开通博客，首先先说点闲话，为什么要开博客。
     image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/AI/2.png
-    category: PersonalGrowth
-    published: 2023-04-02
+    category: 个人成长
+    published: 2022-01-18
     tags: []
 ---
 ----

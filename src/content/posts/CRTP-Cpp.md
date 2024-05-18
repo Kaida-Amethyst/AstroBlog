@@ -2,8 +2,8 @@
 title: C++的静态继承 - CRTP机制
 description: 面向对象中的继承机制要依赖动态多态来实现，不过C++的CRTP机制允许我们进行静态继承
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/1.jpg
-category: Programming
-published: 2023-04-02
+category: 编程实践
+published: 2022-07-14
 tags: [C++]
 ---
 ------

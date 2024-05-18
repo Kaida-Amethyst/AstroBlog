@@ -2,8 +2,8 @@
 title: C++ - 从valarry到simd
 description: 很久以前，C++就有支持运算符操作的valarray了，C++23之后会有simd，实际上运算符的问题相当复杂，值得探讨一下
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/7.jpg
-category: Programming
-published: 2023-04-02
+category: 编程实践
+published: 2023-05-26
 tags: [C++]
 ---
 -----

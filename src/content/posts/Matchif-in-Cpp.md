@@ -2,9 +2,9 @@
 title: C++模板实现MatchIf
 description: 利用C++模板技巧，实现matchif语句。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/4.jpg
-category: Programming
-published: 2023-04-02
-tags: [C++]
+category: 编程实践
+published: 2023-07-18
+tags: [C++, Meta Programming]
 ---
 
 我们期待实现如下的效果：

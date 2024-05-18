@@ -2,8 +2,8 @@
 title: C++黑魔法 - 编译期变量
 description: 编译期变量目前实际上在C++里是不存在的概念，因为C++的模板编程是函数式范式，但是其实可以利用C++编译器的漏洞来间接做到，所以是黑魔法，这里仅仅做有趣的探讨。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/6.jpg
-category: Principle
-published: 2023-04-02
+category: 技术原理
+published: 2023-03-28
 tags: [C++]
 ---
 

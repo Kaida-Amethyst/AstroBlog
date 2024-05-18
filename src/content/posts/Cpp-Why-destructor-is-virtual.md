@@ -2,8 +2,8 @@
 title: C++为什么析构函数是虚函数
 description: 解释一下为什么析构函数经常是虚函数
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/5.jpg
-category: Principle
-published: 2023-04-02
+category: 技术原理
+published: 2022-11-12
 tags: [C++]
 ---
 ------

@@ -2,8 +2,8 @@
 title: C++消除warning
 description: 我们写的程序出现的warning可能无法避免，此时，我们可以在代码中加入一些内容消除这些warning。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/5.jpg
-category: Programming
-published: 2023-04-02
+category: 编程实践
+published: 2023-08-21
 tags: [C++]
 ---
 

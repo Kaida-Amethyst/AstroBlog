@@ -2,8 +2,8 @@
 title: 计算机是如何计算三角函数的
 description: 从数学的角度，解释计算机是如何计算三角函数的，高难预警
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Math/7.jpg
-category: Principle
-published: 2023-04-02
+category: 技术原理
+published: 2023-04-13
 tags: [Math]
 ---
 -----

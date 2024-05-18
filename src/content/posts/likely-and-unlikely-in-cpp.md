@@ -2,9 +2,9 @@
 title: 近距离观察C++20`[[likely]]`和`[[unlikely]]`属性
 description: C++20引入了两个新的属性`[[likely]]`和`[[unlikely]]`，这两个属性可以帮助编译器优化代码，这一篇来观察一下对应的汇编代码。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/3.jpg
-category: Programming
-published: 2023-04-02
-tags: [C++, Assembly]
+category: 编程实践
+published: 2023-04-22
+tags: [C++]
 ---
 
 C++20提供了两个属性：`[[likely]]`和`[[unlikely]]`，用在为编译器提供分支的信息。在更有可能触发的分支上使用`[[likely]]`关键字可以提升一定的程序运行效率。

@@ -2,8 +2,8 @@
 title: C宏技巧 --- 根据宏参数个数不同采取不同动作
 description: 有的时候我们希望当宏参数不同时，C语言能够采取不同的动作，例如只有一个参数时，扩展成一个if，当有两个参数时，扩展成一个if和一个else if。实际上使用一些技巧完全可以让C宏做到这件事。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/5.jpg
-category: Programming
-published: 2023-04-02
+category: 编程实践
+published: 2023-03-11
 tags: [C]
 ---
 

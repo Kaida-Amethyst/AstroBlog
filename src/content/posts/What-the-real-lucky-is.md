@@ -2,8 +2,8 @@
 title: 什么才是真正的幸运
 description: 赚大钱，不劳而获，是幸运吗？
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Life/stars-2.jpg
-category: PersonalGrowth
-published: 2023-04-02
+category: 个人成长
+published: 2024-02-12
 tags: [Thought]
 ---
 -----

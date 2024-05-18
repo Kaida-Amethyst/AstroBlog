@@ -1,9 +1,9 @@
 ---
 title: 2023年度总结
 description: 2023年过完啦，做一个年度总结。
-published: 2024-01-05
+published: 2024-01-02
 image: "https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Picked/2023-annual.jpg"
-category: PersonalGrowth
+category: 个人成长
 tags: [AnnualSummary]
 ---
 

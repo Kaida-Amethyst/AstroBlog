@@ -2,9 +2,9 @@
 title: glibc源码剖析 - scalbnf
 description: 剖析一下glibc中scalbnf的实现，熟悉IEEE 754标准才能解读好这个代码
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Math/3.jpg
-category: Principle
-published: 2023-04-02
-tags: [C]
+category: 技术原理
+published: 2022-03-14
+tags: [C, Math]
 ---
 
 ----

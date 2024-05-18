@@ -2,9 +2,9 @@
 title: Ubuntu Shell美化
 description: 颜值就是战斗力，介绍一下Ubuntu Shell的美化方案
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Computer/5.jpg
-category: Tools
-published: 2023-04-02
-tags: [ubuntu, Linux]
+category: 开发工具
+published: 2024-03-09
+tags: [Ubuntu, Linux]
 ---
 
 ## vpn

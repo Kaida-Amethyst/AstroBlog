@@ -2,8 +2,8 @@
 title: cuda libdevice中的logf函数
 description: glibc的logf虽然比较精准，但不太适合在gpu这种向量化架构上跑，看看cuda是怎么计算的
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Math/5.jpg
-category: Principle
-published: 2023-04-02
+category: 技术原理
+published: 2022-08-17
 tags: [C++]
 ---
 

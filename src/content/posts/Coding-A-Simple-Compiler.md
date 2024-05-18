@@ -2,8 +2,8 @@
 title: 用LLVM写一个简单的编译器
 description: 用LLVM来写一个非常简单的编译器，只能用来处理简单的运算。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Java/1.jpg
-category: Programming
-published: 2023-04-02
+category: 编程实践
+published: 2023-09-12
 tags: [C++, LLVM]
 ---
 

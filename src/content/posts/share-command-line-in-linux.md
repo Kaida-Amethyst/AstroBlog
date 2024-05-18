@@ -2,8 +2,8 @@
 title: 在linux上远程分享命令行
 description: 不使用那些付费的软件，仅仅使用tmux和ssh两个工具，就可以在两台机器上远程共享命令行。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Linux/2.jpg
-category: Tools
-published: 2023-04-02
+category: 开发工具
+published: 2023-10-20
 tags: [Linux]
 ---
 -----

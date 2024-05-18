@@ -2,8 +2,8 @@
 title: 限制C++中的模板模板参数
 description: C++的模板参数比较好限制，但是模板模板参数似乎有一点难，这里做一个记录
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/3.jpg
-category: Programming
-published: 2023-04-02
+category: 编程实践
+published: 2023-10-16
 tags: [C++]
 ---
 

@@ -2,8 +2,8 @@
 title: MBTI的另一种用法
 description: MBTI仅仅是一种玄学分析吗？
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Life/cabin-1.jpg
-category: PersonalGrowth
-published: 2023-04-02
+category: 个人成长
+published: 2023-07-18
 tags: [Thought]
 ---
 

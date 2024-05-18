@@ -1,9 +1,9 @@
 ---
-title: Ubuntu 24.04安装最新版gcc
-published: 2024-04-17
-description: 在最新的ubuntu 24.04上通过源码安装最新版本的gcc
-tags: [Linux, gcc, Ubuntu]
-category: Linux
+title: Ubuntu 20.04安装最新版gcc
+published: 2022-03-16
+description: 在ubuntu 20.04上通过源码安装最新版本的gcc
+category: 开发工具
+tags: [Linux, Ubuntu]
 ---
 
 在新安装的ubuntu系统上，通过源码，安装最新版的gcc。

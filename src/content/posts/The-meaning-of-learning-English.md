@@ -2,8 +2,8 @@
 title: 学英语的意义
 description: 来源于我的知乎回答：学英语有什么意义
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Life/cabin-3.jpg
-category: PersonalGrowth
-published: 2023-04-02
+category: 个人成长
+published: 2023-12-16
 tags: [EnglishLearning]
 ---
 学英语到底有什么意义，有什么用。这个都是老掉牙的问题了，知乎上一搜全都是。我觉得其实没什么必要再额外多这么一篇了。

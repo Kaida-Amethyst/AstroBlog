@@ -2,8 +2,8 @@
 title: 聪明人的个人成长（摘抄）
 description: 第一章，真实。要成长，首先要接受现实，要知道真实情况是什么
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/AI/3.png
-category: PersonalGrowth
-published: 2023-04-02
+category: 个人成长
+published: 2023-02-19
 tags: [Reading]
 ---
 
