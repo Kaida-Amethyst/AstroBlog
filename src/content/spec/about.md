@@ -10,9 +10,4 @@
 - 业余搞搞前端
 - FF14死忠粉，十年老玩家
 
-## Github 主页
-
-Github主页在这里[Kaida-Aemthyst](https://github.com/Kaida-Amethyst).
-
-::github{repo="Kaida-Amethyst/genact"}
 
