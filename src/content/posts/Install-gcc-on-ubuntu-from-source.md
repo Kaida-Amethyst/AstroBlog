@@ -2,6 +2,7 @@
 title: Ubuntu 20.04安装最新版gcc
 published: 2022-03-16
 description: 在ubuntu 20.04上通过源码安装最新版本的gcc
+image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Linux/1.jpg
 category: 开发工具
 tags: [Linux, Ubuntu]
 ---

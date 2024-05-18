@@ -2,7 +2,7 @@
 title: "现代C++实践技巧 - 打印枚举变量名"
 published: 2023-03-08
 excerpt: "使用硬编码来打印变量名可能会非常麻烦，这里有一个比较方便的方法。"
-img: "https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/7.jpg"
+image: "https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/7.jpg"
 category: 编程实践
 tags: [C++]
 draft: false
