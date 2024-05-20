@@ -13,7 +13,7 @@ tags: [Ubuntu, Linux]
 
 这个网站就提供了一些cloudflare工具的下载，本篇博客介绍的是ubuntu下的工作优化，所以下载linux下的工具，按照提示，使用命令：
 
-```shell
+```bash
 # Add cloudflare gpg key
 curl -fsSL https://pkg.cloudflareclient.com/pubkey.gpg | sudo gpg --yes --dearmor --output /usr/share/keyrings/cloudflare-warp-archive-keyring.gpg
 
@@ -30,7 +30,7 @@ sudo apt-get update && sudo apt-get install cloudflare-warp
 
 `https://developers.cloudflare.com/warp-client/get-started/linux/`
 
-```shell
+```bash
 # Register the client
 warp-cli registration new
 
@@ -63,7 +63,7 @@ zsh拥有比bash更加强大的命令行系统，而且比bash要更加好操作
 
 按照github首页的提示，运行下面的命令（任选其一）即可：
 
-```shell
+```bash
 # curl
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 
@@ -76,7 +76,7 @@ sh -c "$(fetch -o - https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 运行完毕之后，会出现下面的输出，代表安装完成。
 
-```shell
+```
          __                                     __   
   ____  / /_     ____ ___  __  __   ____  _____/ /_  
  / __ \/ __ \   / __ `__ \/ / / /  /_  / / ___/ __ \ 
@@ -105,20 +105,23 @@ oh-my-zsh内置了许多美化主题，默认的主题`robbyrussell`不一定适
 
 除了oh-my-zsh的美化，更专业的美化就是starship，starship是跨平台的，也可以用在其它shell中，以下是它网站的demo视频。
 
-<div>
-<iframe height=400 width=600 src="https://starship.rs/demo.webm" />
+
+<div class="flex">
+  <video class="m-auto" width="80%" height="80%" controls>
+    <source src="https://starship.rs/demo.webm" type="video/webm">
+  </video>
 </div>
 
 
 starship也给了非常简单的安装方式，就是直接运行如下的命令：
 
-```shell
+```bash
 curl -sS https://starship.rs/install.sh | sh
 ```
 
 安装完毕后，在`.zshrc`最后写入下面的命令：
 
-```shell
+```bash
 eval "($starship init zsh)"
 ```
 
@@ -144,7 +147,7 @@ starship preset tokyo-night -o ~/.config/starship.toml
 
 先前已经安装了`oh-my-zsh`，这里就直接使用`oh-my-zsh`的插件系统，使用下面的命令：
 
-```
+```bash
 git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
@@ -158,7 +161,7 @@ zoxide是一个更加智能化的`cd`命令，看一下github页面上的demo:
 
 安装也比较简单，按照github上的提示即可：
 
-```
+```bash
 curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | bash
 ```
 
@@ -166,7 +169,7 @@ curl -sS https://raw.githubusercontent.com/ajeetdsouza/zoxide/main/install.sh | 
 
 安装完之后，在`.zshrc`里面启用，我个人还喜欢直接利用alias把`cd`用`z`替换
 
-```shell
+```bash
 eval "$(zoxide init zsh)"
 alias cd=z
 ```
