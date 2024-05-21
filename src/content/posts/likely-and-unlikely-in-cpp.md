@@ -110,42 +110,51 @@ main:
 
 比较一下这两块代码：
 
-```x86asm
-main:
-	pushq	%rax
-	cmpl	$4, %edi
-	jg	.LBB0_2
-	movl	$1, %edi
-	movl	$2, %esi
-	callq	_Z26fooii@PLT
-	popq	%rcx
-	retq
-.LBB0_2:
-	movl	$41, %edi
-	movl	$96, %esi
-	movl	$83, %edx
-	callq	_Z29bariii@PLT
-	popq	%rcx
-	retq
-```
-
-```x86asm
-main:
-	pushq	%rax
-	cmpl	$4, %edi
-	jle	.LBB0_1
-	movl	$41, %edi
-	movl	$96, %esi
-	movl	$83, %edx
-	callq	_Z29barii@PLT
-	popq	%rcx
-	retq
-.LBB0_1:
-	movl	$1, %edi
-	movl	$2, %esi
-	callq	_Z26fooii@PLT
-	popq	%rcx
-	retq
-```
+<div class="flex">
+	<div class="flex-1 p-2">
+		<pre class="astro-code github-dark">
+			<code class="language-asm">
+<span class="line">main:</span>
+<span class="line">    pushq	%rax</span>
+<span class="line">    cmpl	$4, %edi</span>
+<span class="line">    jg	.LBB0_2</span>
+<span class="line">    movl	$1, %edi</span>
+<span class="line">    movl	$2, %esi</span>
+<span class="line">    callq	_Z26fooii@PLT</span>
+<span class="line">    popq	%rcx</span>
+<span class="line">    retq</span>
+<span class="line">.LBB0_2:</span>
+<span class="line">    movl	$41, %edi</span>
+<span class="line">    movl	$96, %esi</span>
+<span class="line">    movl	$83, %edx</span>
+<span class="line">    callq	_Z29bariii@PLT</span>
+<span class="line">    popq	%rcx</span>
+<span class="line">    retq</span>
+			</code>
+		</pre>
+	</div>
+	<div class="flex-1 p-2">
+		<pre>
+			<code class="language-asm">
+<span class="line">main:</span>
+<span class="line">    pushq	%rax</span>
+<span class="line">    cmpl	$4, %edi</span>
+<span class="line">    jle	.LBB0_1</span>
+<span class="line">    movl	$41, %edi</span>
+<span class="line">    movl	$96, %esi</span>
+<span class="line">    movl	$83, %edx</span>
+<span class="line">    callq	_Z29barii@PLT</span>
+<span class="line">    popq	%rcx</span>
+<span class="line">    retq</span>
+<span class="line">.LBB0_1:</span>
+<span class="line">    movl	$1, %edi</span>
+<span class="line">    movl	$2, %esi</span>
+<span class="line">    callq	_Z26fooii@PLT</span>
+<span class="line">    popq	%rcx</span>
+<span class="line">    retq</span>
+			</code>
+		</pre>
+	</div>
+</div>
 
 从这里可以看到，第一种情况，如果为`argc < 5`的情形标注`[[likely]]`，那么函数的跳转会把调用`bar`的代码安排在“稍微远一点”的地方。如果反过来为`argc < 5`的情形标注`[[unlikely]]`，那么编译器会把调用`foo`的代码往后安排。把更可能的分支安排在接近`cmp`指令的地方，从而避免频繁地跳转对性能的干扰。
