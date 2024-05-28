@@ -1,7 +1,7 @@
 ---
 title: 一些有用的linux命令行工具
 description: 介绍了bat lsd rg btop fzf等一些有用的linux命令行工具
-image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Linux/4.jpg
+image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Linux/arch-girl-1.png
 category: 开发工具
 published: 2024-04-17
 tags: [Linux]

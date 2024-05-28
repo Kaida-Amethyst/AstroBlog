@@ -2,7 +2,7 @@
 title: 在Ubuntu系统上安装Clang编译器
 published: 2023-11-27
 description: 记录一下在Ubuntu系统上安装clang编译器的方法以及注意事项。
-image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Linux/2.jpg
+image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Linux/llvm.png
 category: 开发工具
 tags: [Linux, Ubuntu]
 ---

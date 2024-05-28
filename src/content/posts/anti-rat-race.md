@@ -1,7 +1,7 @@
 ---
 title: 认识论 - 反内卷的逻辑
 description: 无论别人如何行动，我自己都是始终坚持反内卷，写一写我的思考
-image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/AI/4.png
+image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/AI/cat-1.png
 category: 个人成长
 published: 2024-03-08
 tags: [Thought]
