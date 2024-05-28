@@ -1,6 +1,6 @@
 ---
-title: AstroNvim - 把Neovim打造成IDE
-published: 2024-2-21
+title: "AstroNvim - 把Neovim打造成IDE"
+published: 2024-02-21
 description: AstroNvim是基于Neovim的一套预配置环境，通过集成多种插件，提供了一种快速、现代的开发环境配置方法。
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Linux/2.jpg
 category: 开发工具
