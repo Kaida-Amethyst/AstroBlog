@@ -4,7 +4,7 @@ published: 2023-03-06
 description: "用ink!实现一个简单的智能合约，部署到波卡生态网络上"
 image: "https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Java/3.jpg"
 category: 编程实践
-tags: ["Rust"]
+tags: [Rust, Block Chain]
 draft: false
 ---
 
