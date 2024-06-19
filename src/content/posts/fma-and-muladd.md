@@ -1,7 +1,7 @@
 ---
 title: 近距离观察fma对精度的提升
 description: fma即融合乘加，也就是对三个数，前两个数先乘，再与第三个数相加。很多人不理解，为什么fma与普通的先乘后加有精度上的差异，这里做一个细致的观察。
-image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Math/5.jpg
+image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Math/8.jpg
 category: 技术原理
 published: 2023-05-26
 tags: [Math]

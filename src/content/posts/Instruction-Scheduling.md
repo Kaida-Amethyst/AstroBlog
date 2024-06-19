@@ -1,7 +1,7 @@
 ---
 title: 指令调度
 description: 由于芯片底层流水线的设计，按序执行指令可能并非是性能最优的方案，适当调整指令执行的顺序会使得程序的运行效率提高，这就是编译优化的指令调度。
-image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Python/3.jpg
+image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Bitcode/3.jpg
 category: 技术原理
 published: 2022-09-16
 tags: [Compiler]
