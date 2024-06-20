@@ -1,7 +1,7 @@
 ---
 title: LLVM Pass 剖析 - SROA
 description: 剖析一下LLVM中SROA Pass的实现
-image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Java/5.jpg
+image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Javascript/9.jpg
 category: 技术原理
 published: 2023-09-21
 tags: [LLVM, Source Code Analysis, Compiler]
