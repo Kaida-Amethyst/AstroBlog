@@ -7,6 +7,8 @@ published: 2023-03-28
 tags: [C++]
 ---
 
+------------------
+
 注意：本篇blog中的代码涉及到Undefined Behaviour，不建议在生产环境中使用。
 
 ## Question

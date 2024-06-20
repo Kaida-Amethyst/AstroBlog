@@ -7,6 +7,8 @@ published: 2024-04-17
 tags: [Linux]
 ---
 
+-------------------
+
 ## bat
 
 github位置：[https://github.com/sharkdp/bat](https://github.com/sharkdp/bat)

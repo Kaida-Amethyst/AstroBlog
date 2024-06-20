@@ -9,9 +9,9 @@ tags: [LLVM, Source Code Analysis, Compiler]
 
 -----------
 
-## SORA
+## SROA
 
-SORA的全称叫做Scalar Replacement of Aggregates。这个优化手段按照字面意义上来说，其实是针对聚合类型的，对于C系列的语言来说，就是`struct`，通过SROA来将单个标量的空间分配和store来直接用标量来替代。
+SROA的全称叫做Scalar Replacement of Aggregates。这个优化手段按照字面意义上来说，其实是针对聚合类型的，对于C系列的语言来说，就是`struct`，通过SROA来将单个标量的空间分配和store来直接用标量来替代。
 
 例如，对于非常简单的一行代码`int a = 1`，仅仅做语法分析而不考虑优化的话，这一个变量会在栈上占据4字节的空间，对于LLVM来说，这样的代码会有一个alloc指令和store指令。但是实际的运行过程中，我们可能会希望这个a变量一直存放在一个寄存器里面，也就是说，我们可能会希望优化alloc和store指令，而直接使用值。这就是SROA。
 

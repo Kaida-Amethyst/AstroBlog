@@ -7,6 +7,9 @@ category: 开发工具
 tags: [Linux, Ubuntu, Vim]
 ---
 
+
+--------------
+
 AstroNvim是基于Neovim的一套预配置环境，通过集成多种插件，提供了一种快速、现代的开发环境配置方法。AstroNvim已经经历了几个版本，本篇博客介绍的是最近版v4的安装。
 
 ## Neovim安装
