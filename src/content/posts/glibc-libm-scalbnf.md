@@ -4,20 +4,20 @@ description: 剖析一下glibc中scalbnf的实现，熟悉IEEE 754标准才能�
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Math/3.jpg
 category: 技术原理
 published: 2022-03-14
-tags: [C, Math]
+tags: [C, Source Code Analysis]
 ---
 
 ----
 
 ## Function Prototype
 
-​`scalbn`​函数定义在`camth`​库中，声明如下：
+`scalbn`函数定义在`camth`库中，声明如下：
 
 ```cpp
 double scalbn(double x, int n);
 ```
 
-它的作用是将指定数`x`​缩放$2^n$，相当于：
+它的作用是将指定数`x`缩放$2^n$，相当于：
 
 ```cpp
 double scalbn(double x, int n) {
@@ -134,5 +134,3 @@ double fdscalbn (double x, int n) {
     return x*twom54;
 }
 ```
-
-‍

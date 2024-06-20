@@ -4,7 +4,7 @@ description: glibc的logf虽然比较精准，但不太适合在gpu这种向量�
 image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Math/5.jpg
 category: 技术原理
 published: 2022-08-17
-tags: [C++]
+tags: [C++, Source Code Analysis, Math]
 ---
 
 ----
