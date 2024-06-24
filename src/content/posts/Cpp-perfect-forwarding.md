@@ -1,0 +1,231 @@
+---
+title: C++完美转发的细节
+description: 完美转发机制是弄明白C++ functional的关键问题，这里对这个机制，包括引用的传递，折叠等问题做一个详细的解释。
+image: https://blogimgs-1309485105.cos.ap-nanjing.myqcloud.com/Cover/Cpp/6.jpg
+category: 技术原理
+published: 2024-06-23
+tags: [C++]
+---
+
+------------------
+
+## 左值引用和右值引用
+
+为了避免值传递的开销，我们可能希望对一个对象使用引用。在C++中，在向函数传引用的时候，有两种方式，一种是传左值引用，像这样：
+
+```cpp
+void foo(int&);
+```
+
+对于上面的foo函数，传值的时候可以传任意的左值，例如假设有`int y=1;`，`foo(y)`是OK的。
+
+但是如果紧急有左值引用，在一些情况下是有问题的，对于`foo(42)`来说，无法通过编译，因为`42`是一个字面量，它没有一个变量名去绑定（或者说，你没办法对它取指针），因此它没法传值给`foo(int&)`这个函数。
+
+于是C++中就诞生了右值引用，规定`42`，或者`3+29`这样由表达式得到的值，为类型的右值引用，可以调用下面的函数：
+
+```cpp
+void foo(int &&);
+```
+
+这样的话，`foo(42)`，或者`foo(3+29)`都是合法的了。
+
+## 常量引用
+
+但是为了做到传引用这件事，C++要分别处理左值引用和右值引用的办法明显会显得非常麻烦。C++中提供了一个常量引用的机制，就是说，如果你对传进来的引用类型不进行修改的话，那么就允许右值进行绑定，也就是说，假设代码中只有一个接收常量引用的函数：
+
+```cpp
+void foo(const int&);
+```
+
+对于上面的函数而言，`foo(42)`和`int y=29; foo(y)`都是合法的。
+
+但是这种方式要求的是，foo函数中是不能修改x的值的，因为它是const引用。
+
+## 右值引用于常量引用的使用关系
+
+不过这样带来一个问题，假设代码中同时存在`foo(int&&)`和`foo(const int&)`时，在调用`foo(42)`时，会走哪一个呢？
+
+答案是，会走`foo(int&&)`，因为42本身更加符合`int&&`的定义，如果代码中是存在`foo(int&&)`，那么就会优先走这个接收右值引用的函数。
+
+但是，假设我们的代码是这样：
+
+```cpp
+void foo(int&&);
+void foo(const int&);
+
+int && t = 42;
+foo(t);
+```
+
+这个时候，会调用哪一个foo呢?
+
+答案是，会调用`foo(const int&)`，而不是`foo(int&&)`。
+
+注意C++中的规则，**任何具名的变量都是左值**，这里面，尽管`t`的类型是一个右值引用，这意味着`int && t = y;`这样的语句是完全不合法的，但是t是具名的，因此在函数调用的是否，调用的是左值引用的函数，调用的是`foo(const int&)`，而不是`foo(int&&)`。
+
+## 移动语义
+
+如果仅仅是针对上面的例子，假设我需要去调用`foo(int&&)`，那么是需要对这个`t`使用`std::move`的
+
+```cpp
+void foo(int&&);
+void foo(const int&);
+
+int && t = 42;
+foo(std::move(t));
+```
+
+`std::move`会强制类型转换为右值，因此对于上面的代码来说，就会使用`foo(int&&)`了。
+
+## forward reference
+
+对于前面的讨论，可能会觉得很无聊，因为日常的开发过程中，很少有人会使用`int && t = 42;`这样的语句，但是实际上上面的代码仅仅是一种简化的讨论，真正的问题在于函数的调用链。
+
+从上面的代码中，我们已经知道，如果要写一个函数`foo`，既能够接受左值`int&`，又能够接受右值`int&&`，我们就得写两个函数，一个接收左值`foo(int&)`，一个接收右值`foo(int&&)`。如果我们只想写一个函数，如果这个值保证在函数内不变的话，可以使用常量引用`foo(const int&)`，这里的问题是，如果我们没法保证这个值在函数内是不变的，又想只写一个函数，怎么办？
+
+那我们可能会想让模板来进行推断，这个就是forward reference，转发引用，或者说是万能引用。这样写：
+
+```cpp
+template<typename T>
+void foo(T && x);
+```
+
+对于这个函数来说，`foo(42)`和`foo(y)`都是可以实例化的，但是在使用的过程中，会遇到一个问题。就是偶尔你可能需要弄清楚这个x的类型。
+
+前面我们已经提到，在C++中，**任何具名的变量在函数传递的时候都是左值**，这样一来就会遇到一个问题，假设我有两个函数：
+
+```cpp
+void bar(int&&);
+void bar(const int&);
+```
+
+这两个函数接收了不同的引用类型，内部的逻辑也不太相同，然后它们被foo调用：
+
+```cpp
+template<typename T>
+void foo(T && x) {
+  bar(x);
+}
+```
+
+这里可能会遇到问题，根据前面的描述：**任何具名的变量在函数传递的时候都是左值**，无论x本身的类型是左值还是右值。换而言之：
+
+```cpp
+foo(42);  // call bar(const int&);
+foo(y);   // call bar(int &&);
+```
+
+尝试运行下面的代码，可以展示上面描述的问题：
+
+```cpp
+#include <utility>
+#include <iostream>
+
+
+void foo(const int & x) {
+  std::cout << __PRETTY_FUNCTION__ << std::endl;
+}
+
+void foo(int && x) {
+  std::cout << __PRETTY_FUNCTION__ << std::endl;
+}
+
+template <typename T>
+void bar(T&& x) {
+  foo(x);
+  return;
+}
+
+int main() {
+  int t = 42;
+  bar(42);
+  bar(t);
+  return 0;
+}
+```
+
+但这很可能违背了我们的期望，我们有的时候可能希望函数的参数传进来的是什么类型，就要调用什么类型的函数。
+
+对于上面的`bar(42)`，在函数内部是`int&&`类型，我们希望它调用`foo(int&&)`，但是因为具名的关系，调用的是`foo(const int&)`。
+
+我们很显然不能无脑使用move，因为对于第二种情况`bar(t)`来说，我们又确实希望它去调用`foo(const int&)`。
+
+此时就需要使用`std::forward`，完美转发机制。
+
+(注：不要认为这个事情是无意义的，在某些领域的开发中，例如在一些EDSL的开发中，左值和右值可能会因为涉及到寄存器分配的问题，因此需要区别实现。)
+
+## std::forward
+
+对于前面的讨论
+
+我们把前面的bar函数，修改成下面的形式，就可以了：
+
+```cpp
+template <typename T>
+void bar(T&& x) {
+  foo(std::forward<T>(x));
+  return;
+}
+```
+
+## forward的原理
+
+前面讲述的都是用法，要彻底弄明白完美转发到底是怎么一回事，我们就必须对前面提到的代码进行一个详细的思考。
+
+看这个代码：
+
+```cpp
+template <typename T>
+void bar(T&& x);
+```
+
+我们有一个bar函数，使用了这种forward reference，那么问题是对于函数调用`bar(42)`和`bar(y)`两个函数调用而言，`T`和`x`的类型到底是什么。
+
+`T`的类型很好知道，直接运行就可以了：
+
+```cpp
+template <typename T>
+void bar(T&& x) {
+  std::cout << __PRETTY_FUNCTION__ << std::endl;
+}
+```
+
+运行一下就知道，`bar(42)`会告诉你此时`T = int`，而`bar(y)`会告诉你`T = int&`。
+
+但这是`T`的类型，问题是`x`的类型。我从两个方面解释这个问题。
+
+一个方面是forward reference有的时候被翻译成“万能引用”或者说“通用引用”，也就是说，这里面，x的类型，是传入什么类型，就是是什么类型，也就是说，对于`bar(42)`来说，x的类型就是`int&&`，对于`bar(y)`来说，x的类型就是`int&`。
+
+另外一个方面是C++中的折叠规则：
+
+1. `&` 和 `&` 折叠为 `&`
+2. `&&` 和 `&` 折叠为 `&`
+3. `&` 和 `&&` 折叠为 `&`
+4. `&&` 和 `&&` 折叠为 `&&`
+
+也就是说，当`T = int`时，`T &&`当然就是`int &&`，当`T = int&`时，`T &&`就是`int& &&`，会被折叠成`int&`，这个就是x的类型的由来。
+
+回到之前代码里的问题，对于函数：
+
+```cpp
+template <typename T>
+void bar(T&& x) {
+  foo(std::forward<T>(x));
+  return;
+}
+```
+
+然后使用了`bar(42)`和`bar(y)`。对于内部的两次调用而言，foo的参数分别是`std::forward<int>(x)`，和`std::forward<int&>(x)`。然后我们可以知道`std::forward<int>(x)`应该是把`x`的类型转换为了`int&&`，而`std::forward<int&>(x)`则是把`x`的类型转换为了`int&`。
+
+知道这一层之后，我们就可以来看forward的原理代码了：
+
+```cpp
+template<typename T>
+T&& forward(typename std::remove_reference<T>::type& x) noexcept {
+    return static_cast<T&&>(x);
+}
+```
+
+它的基本意思，就相当于利用前面所说的引用折叠的规则，forward reference的函数中对于`bar(42)`，它的T类型是`T = int`，加上一个`&&`之后就变成了`int&&`，因此在调用`foo`的时候就会调用`foo(int&&)`，而对于`bar(x)`，它的T类型是`T = int&`，加上一个`&&`就变成了`int& &&`，通过引用折叠就变成了`int&`，所以调用`foo`的时候调用`foo(const int&)`。
+
+额外注意一下上面forward的参数：`typename std::remove_reference<T>::type& x`，这里确保即使`T`是引用类型，参数`x`也是一个普通的引用（左值引用）。
