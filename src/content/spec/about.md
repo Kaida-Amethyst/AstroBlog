@@ -30,75 +30,15 @@
 
 ## 求星项目
 
-[动手构建C编译器（笔记）](https://c-compiler-notes.ziyue.cafe)：
+-------
 
-::github{repo="Kaida-Amethyst/CCompilerNotes"}
+Moonbit-llvm库，支持在Moonbit语言中编写llvm程序，从而实现更高效的编译器开发。
 
-[最终幻想14英文笔记](https://ffxiv.ziyue.cafe)：
+::github{repo="Kaida-Amethyst/moonbit-llvm"}
 
-::github{repo="Kaida-Amethyst/ffxiv_notes"}
+-------
 
+Moonbit-Math库，纯粹使用Moonbit编写的数学库，目标是未来对标Scipy。
 
-<hr class="w-4/5 h-1 mx-auto my-8 bg-gray-700 border-0 rounded">
-
-## 2024挖坑
-
-<div class="flex">
-  <div class="flex-1 p-6">
-    <ul class="text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-            <div class="flex items-center ps-3">
-                <input checked type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">重新整合博客，使用Astro框架</label>
-            </div>
-        </li>
-        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-            <div class="flex items-center ps-3">
-                <input checked type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">C编译器笔记</label>
-            </div>
-        </li>
-        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-            <div class="flex items-center ps-3">
-                <input checked type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">ff14英文笔记</label>
-            </div>
-        </li>
-        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-            <div class="flex items-center ps-3">
-                <input disabled type="checkbox"  class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">C++模板元编程算法库</label>
-            </div>
-        </li>
-    </ul>
-  </div>
-  <div class="flex-1 p-6">
-    <ul class="text-sm font-medium text-gray-900 bg-white border border-gray-200 rounded-lg dark:bg-gray-700 dark:border-gray-600 dark:text-white">
-        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-            <div class="flex items-center ps-3">
-                <input disabled type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Rust Python</label>
-            </div>
-        </li>
-        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-            <div class="flex items-center ps-3">
-                <input disabled type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">llvm Pass笔记</label>
-            </div>
-        </li>
-        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-            <div class="flex items-center ps-3">
-                <input disabled type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Rust构建区块链</label>
-            </div>
-        </li>
-        <li class="w-full border-b border-gray-200 rounded-t-lg dark:border-gray-600">
-            <div class="flex items-center ps-3">
-                <input disabled type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-700 dark:focus:ring-offset-gray-700 focus:ring-2 dark:bg-gray-600 dark:border-gray-500">
-                <label class="w-full py-3 ms-2 text-sm font-medium text-gray-900 dark:text-gray-300">Rust智能合约学习</label>
-            </div>
-        </li>
-    </ul>
-  </div>
-</div>
+::github{repo="Kaida-Amethyst/moonbit-math"}
 
