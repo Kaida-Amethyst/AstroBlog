@@ -32,13 +32,37 @@
 
 -------
 
-Moonbit-llvm库，支持在Moonbit语言中编写llvm程序，从而实现更高效的编译器开发。
+llvm.mbt库，支持在Moonbit语言中编写llvm程序，从而实现更高效的编译器开发。
 
-::github{repo="Kaida-Amethyst/moonbit-llvm"}
+::github{repo="moonbitlang/llvm.mbt"}
 
 -------
 
-Moonbit-Math库，纯粹使用Moonbit编写的数学库，目标是未来对标Scipy。
+MoonLLVM库，纯粹使用MoonBit编写的llvm 核心库，允许在不依赖llvm的情况下，生成llvm IR，并最终编译到后端代码。本项目是MoonBit核心开发团队与中科院软件所的合作项目成果之一。
 
-::github{repo="Kaida-Amethyst/moonbit-math"}
+::github{repo="moonbitlang/MoonLLVM"}
+
+-------
+
+python.mbt库，允许你在MoonBit中使用python生态里的内容。
+
+::github{repo="moonbitlang/python.mbt"}
+
+-------
+
+mbtcc，一个使用MoonBit开发的C编译器。
+
+::github{repo="moonbitlang/mbtcc"}
+
+-------
+
+MiniMoonBit，使用MoonBit编写的MiniMoonBit编译器，支持闭包，高阶函数等复杂特性，可以跑光线追踪这样的有一定复杂的程序。本项目受到了中科院软件所的点赞。
+
+::github{repo="moonbitlang/MiniMoonBit2025"}
+
+-------
+
+math.mbt库，纯粹使用Moonbit编写的数学库，目标是未来对标Scipy。
+
+::github{repo="Kaida-Amethyst/math.mbt"}
 
